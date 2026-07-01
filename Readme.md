@@ -1,4 +1,4 @@
-# Enterprise RAG Chatbot
+# PDF Knowledge Assistant 
 
 A production-grade Retrival Augmented Generation (RAG) Chatbot build with FastAPI, Qdrant, PostgreSQL and Gemini.
 
