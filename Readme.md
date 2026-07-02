@@ -1,4 +1,4 @@
-# PDF Knowledge Assistant
+# PDF Knowledge Assistant 
 
 A production-ready Retrieval-Augmented Generation (RAG) application that answers questions from uploaded PDF documents using semantic search.
 
@@ -24,6 +24,7 @@ A production-ready Retrieval-Augmented Generation (RAG) application that answers
 - Sentence Transformers
 - Gemini API
 - Docker
+
 
 ## 📈 Progress
 
