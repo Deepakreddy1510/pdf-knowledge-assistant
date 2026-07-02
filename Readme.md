@@ -1,19 +1,39 @@
-# Enterprise RAG Chatbot
+# PDF Knowledge Assistant
 
-A production-grade Retrival Augmented Generation (RAG) Chatbot build with FastAPI, Qdrant, PostgreSQL and Gemini.
+A production-ready Retrieval-Augmented Generation (RAG) application that answers questions from uploaded PDF documents using semantic search.
 
-## Status 
-
-Under Development 
-
-## Planned Features
+## 🚀 Planned Features
 
 - PDF Upload
-- Chunking
-- Embeddings
-- Qdrant
+- Text Extraction
+- Intelligent Chunking
+- Sentence Transformer Embeddings
+- Qdrant Vector Database
 - Gemini API
-- PostgreSQL
-- Chat History
+- PostgreSQL Chat History
+- Multi-document Support
 - Source Citations
+- Docker Deployment
+
+## 🛠 Tech Stack
+
+- Python
+- FastAPI
+- Qdrant
+- PostgreSQL
+- Sentence Transformers
+- Gemini API
 - Docker
+
+## 📈 Progress
+
+### ✅ Day 1
+- Project initialized
+- FastAPI installed
+- First GET endpoint
+
+### ✅ Day 2
+- Learned HTTP GET and POST methods
+- Implemented request validation using Pydantic
+- Created POST /ask endpoint
+- Tested APIs using Swagger UI
