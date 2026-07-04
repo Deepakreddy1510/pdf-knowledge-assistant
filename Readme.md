@@ -38,3 +38,11 @@ A production-ready Retrieval-Augmented Generation (RAG) application that answers
 - Implemented request validation using Pydantic
 - Created POST /ask endpoint
 - Tested APIs using Swagger UI
+
+
+### ✅ Day 4
+
+- Implemented PDF text extraction using PyMuPDF
+- Created reusable PDF utility module
+- Added `/extract` endpoint
+- Returned extracted text preview and character count
