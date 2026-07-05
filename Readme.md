@@ -46,3 +46,14 @@ A production-ready Retrieval-Augmented Generation (RAG) application that answers
 - Created reusable PDF utility module
 - Added `/extract` endpoint
 - Returned extracted text preview and character count
+
+
+## ✅ Day 5
+
+### Features Added
+
+- Refactored Pydantic models into `schemas.py`
+- Created reusable `chunking.py`
+- Implemented fixed-size chunking
+- Added `/chunks` endpoint
+- Project architecture became more modular
