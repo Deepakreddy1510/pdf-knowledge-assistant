@@ -5,6 +5,7 @@ import shutil
 from app.schemas import Question, PDFRequest
 from app.pdf_utils import extract_text
 from app.chunking import chunk_pdf_pages
+from app.embedding import embed_chunks
 
 app = FastAPI()
 
@@ -87,4 +88,42 @@ def create_chunks(request: PDFRequest):
         "filename": request.filename,
         "total_chunks": len(chunks),
         "first_chunk": chunks[0]["chunk_text"] if chunks else ""
+    }
+
+@app.post("/embed")
+def embed_pdf(request: PDFRequest):
+
+    file_path = UPLOAD_FOLDER / request.filename
+
+    if not file_path.exists():
+        return {
+            "error": "File not found"
+        }
+
+    text = extract_text(file_path)
+
+    pages_and_texts = [
+        {
+            "page_number": 1,
+            "page_text": text,
+        }
+    ]
+
+    chunks = chunk_pdf_pages(
+        pages_and_texts,
+        chunk_size=500,
+    )
+
+    chunk_texts = [
+        chunk["chunk_text"]
+        for chunk in chunks
+    ]
+
+    embeddings = embed_chunks(chunk_texts)
+
+    return {
+        "filename": request.filename,
+        "total_chunks": len(chunk_texts),
+        "embedding_dimension": len(embeddings[0]),
+        "first_embedding": embeddings[0][:10],   # first 10 values only
     }
