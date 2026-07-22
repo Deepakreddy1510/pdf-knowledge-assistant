@@ -1,13 +1,34 @@
-__pycache__/
-*.pyc
-
+# Environment secrets
 .env
+.env.*
+!.env.example
+**/.env.local
+**/.env.*.local
+!**/.env.local.example
 
+# Python
+__pycache__/
+*.py[cod]
 .venv/
 venv/
 
+# Next.js and Node.js
+**/node_modules/
+**/.next/
+**/out/
+**/dist/
+npm-debug.log*
+
+# Documents and generated embedding files
+*.pdf
+*_embeddings_*.npz
+
+# Local caches
+.cache/
+.huggingface/
+
+# Editors and operating systems
 .vscode/
 .idea/
-
-uploads/*
-!uploads/.gitkeep
+.DS_Store
+Thumbs.db
